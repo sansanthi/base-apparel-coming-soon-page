@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: hsl(0, 36%, 70%);
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+.container {
+    padding: 0 2rem;
+}
+.logo {    
+    padding: 2rem 0;
+}
+.logo-img {
+    max-width: 7rem;
+}
+
+.potarit-image {
+    height: 15rem;
+    background: url(images/hero-mobile.jpg) no-repeat;
+    background-size: cover;
+}
+
+.section-subscribe {    
+    text-align: center;
+    
+}
+.subscribe-box {
+    padding: 4rem 1.8rem;
+}
+h1 {
+    font-size: 2.75rem;
+    font-weight: 600;
+    letter-spacing: 0.7rem;
+    text-transform: uppercase;
+    line-height: 1.15;
+    color: hsl(0, 6%, 24%);
+    margin-bottom:1.75rem;
+    
+}
+.highlight {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.subscribe-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* email input */
+.subscribe-btn {
+    display: flex;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 2rem;
+    overflow: hidden;   
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.input-control {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.email-input,
+.btn {
+    border: none;
+}
+.email-input {
+    height: 3rem;
+    border-left-color: hsl(0, 36%, 70%);
+    outline: none;
+    background: transparent;
+}
+.email-input::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+.email-input:hover,
+.email-input:active {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.error-icon {
+    height: 1.4rem;
+    width: 1.4rem;
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+}
+.input-control.error .error-icon {
+    display: block;
+}
+ .error-message {
+    display: none;
+    padding: 0.5rem 0 0 2rem;
+}
+.btn {
+    width: 5rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    border-right-color: hsl(0, 36%, 70%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+.btn img {
+    height: 1rem;
+}
+.btn:active,
+.btn:hover {
+    background: hsl(0, 80%, 86%);
+    box-shadow: 0px 15px 15px hsl(0, 36%, 70%);
+    cursor: pointer;    
+}
+
+/* for tablet */
+@media screen and (min-width: 37rem) {
+    body {
+        padding: 2rem 8rem;
+        
+    }
+    .container {
+        padding: 0;
+    }
+    .logo-img {
+        max-width: 16rem;
+    }
+    .potarit-image {
+        height: 24rem;
+        background: url(images/hero-desktop.jpg) no-repeat;
+        background-size: cover;
+    }
+    
+    h1 {
+        font-size: 3.4rem;
+    }
+}
+/* For laptop and desktop */
+@media (min-width: 62rem) {
+    body {        
+        padding: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 40%;
+        grid-template-rows: auto auto;
+        background:  url(images/bg-pattern-desktop.svg), linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+        background-repeat: no-repeat;
+    }
+    
+    .potarit-image {
+        grid-column: 2/-1;
+        grid-row: 1/-1;        
+        height: 100%;
+        background: url(images/hero-desktop.jpg) no-repeat;
+        background-size: cover;
+    }
+    .container {
+        padding: 0 8rem;
+        align-self: center;
+    }
+    .logo-img {
+        max-width: 20rem;
+    }
+    .section-subscribe {
+        text-align: left;
+        
+    }
+    .subscribe-box {
+        padding: 0 8rem;
+    }
+    h1 {
+        font-size: 4em;
+        letter-spacing: 1.1rem;
+    }
+    .subscribe-text {
+        font-size: 1rem;
+        letter-spacing: 0.05rem;
+        line-height: 1.8;
+    }
+    .email-input {
+        height: 3rem;
+        padding: 0;
+        padding-left: 1.5rem;
+    }
+    .btn {
+        width: 5rem;
+    }
+}
